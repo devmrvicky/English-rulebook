@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    transition: background-color 200ms ease, color 200ms ease;
+  }
+  ::selection {
+    background-color: theme("colors.amber.soft");
+    color: theme("colors.ink.DEFAULT");
+  }
+  :focus-visible {
+    outline: 2px solid theme("colors.amber.DEFAULT");
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* The reading pane: a thin ruled margin line, like notebook paper, sits
+     quietly to the left of every rule's prose — the page's signature. */
+  .ledger-page {
+    position: relative;
+    padding-left: 1.75rem;
+  }
+  .ledger-page::before {
+    content: "";
+    position: absolute;
+    left: 0.65rem;
+    top: 0.15rem;
+    bottom: 0.15rem;
+    width: 1px;
+    background: theme("colors.margin.red");
+    opacity: 0.35;
+  }
+
+  /* Rule-number "stamp": a small monospace tag, like an entry number
+     written in a ledger column. */
+  .rule-stamp {
+    @apply inline-flex items-center justify-center rounded-tab border border-ink/15 bg-paper-dim px-2 py-0.5 font-mono text-xs font-medium text-ink-soft;
+  }
+
+  /* Correct example — teacher's green tick in the margin. */
+  .example-correct {
+    @apply flex items-start gap-2 rounded-md border border-margin-green/30 bg-margin-greenSoft px-3 py-2 text-sm text-ink;
+  }
+
+  /* Wrong example — teacher's red strike, content shown with a soft
+     strikethrough to read as "corrected," not just "wrong." */
+  .example-wrong {
+    @apply flex items-start gap-2 rounded-md border border-margin-red/30 bg-margin-redSoft px-3 py-2 text-sm text-ink-soft line-through decoration-margin-red/70;
+  }
+
+  .skeleton {
+    @apply animate-pulse rounded-md bg-ink/10;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: theme("colors.ink.faint");
+    border-radius: 999px;
+  }
+}
