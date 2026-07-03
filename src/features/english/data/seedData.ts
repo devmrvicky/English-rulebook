@@ -12,6 +12,11 @@ export const categories: Category[] = [
 ];
 
 export const chapters: Chapter[] = [
+  { id: "ch-noun-1", categoryId: "cat-noun", title: "Number Rules", slug: "number-rules", description: "Singular/plural traps SSC tests most: always-singular, always-plural, and same-form nouns.", order: 1 },
+  { id: "ch-noun-2", categoryId: "cat-noun", title: "Countable & Uncountable Nouns", slug: "countable-uncountable", description: "Which nouns take a/an and plural forms, and which never do.", order: 2 },
+  { id: "ch-noun-3", categoryId: "cat-noun", title: "Collective Nouns", slug: "collective-nouns", description: "Singular or plural verb, depending on whether the group acts as one unit or as individuals.", order: 3 },
+  { id: "ch-noun-4", categoryId: "cat-noun", title: "Case (Possessive)", slug: "case", description: "When to use 's and when to use 'of'.", order: 4 },
+
   { id: "ch-conj-1", categoryId: "cat-conjunction", title: "Definition", slug: "definition", description: "What a conjunction is and why it matters.", order: 1 },
   { id: "ch-conj-2", categoryId: "cat-conjunction", title: "Types", slug: "types", description: "Coordinating, subordinating, and correlative conjunctions.", order: 2 },
   { id: "ch-conj-3", categoryId: "cat-conjunction", title: "Rules", slug: "rules", description: "Pairing rules SSC tests most often.", order: 3 },
@@ -23,6 +28,458 @@ export const chapters: Chapter[] = [
 ];
 
 export const rules: Rule[] = [
+  {
+    id: "rule-noun-001",
+    chapterId: "ch-noun-2",
+    categoryId: "cat-noun",
+    ruleNumber: 1,
+    title: "Material & abstract uncountable nouns take no plural and no 'a/an'",
+    slug: "uncountable-nouns-no-plural",
+    difficulty: "medium",
+    importance: "very-high",
+    englishExplanation:
+      "Uncountable nouns — material nouns (gold, milk, sugar), abstract nouns (advice, information, knowledge), and a set group of everyday nouns (furniture, luggage, stationery, scenery, poetry, machinery, jewellery, news, bread) — cannot be counted individually. They never take a plural 's', never take 'a/an', and always take a singular verb.",
+    hindiExplanation:
+      "Uncountable nouns (जिन्हें गिना नहीं जा सकता) कभी plural 's' नहीं लेते, कभी 'a/an' नहीं लेते, और हमेशा singular verb लेते हैं। जैसे: advice, information, furniture, luggage, news, poetry, machinery — इनका कोई plural रूप नहीं होता।",
+    memoryTrick: "FISH-NAP: Furniture, Information, Scenery, Hair(general), News, Advice, Poetry — none of these ever take an 's'.",
+    importantPoints: [
+      "To express quantity, use 'a piece of', 'an item of', 'a bit of' — e.g. 'a piece of advice', 'an item of furniture'.",
+      "Common exam-trap nouns: advice, information, furniture, luggage, baggage, stationery, scenery, poetry, machinery, jewellery, news, bread, knowledge.",
+      "These nouns always pair with 'much', 'little', 'a lot of' — never with 'many' or 'a/an'.",
+    ],
+    exceptions: [
+      "'Furnitures', 'advices', 'informations', 'newses' are never correct — these are among the most frequently tested wrong forms.",
+      "'Fruit' and 'stone' can occasionally be countable in specific technical senses, but for SSC purposes treat them as uncountable.",
+    ],
+    commonMistakes: [
+      "She gave me some good advices. — should be 'advice' (no 's').",
+      "I have many informations about it. — should be 'much information'.",
+      "We bought new furnitures for the house. — should be 'furniture'.",
+    ],
+    sscTips: [
+      "In error-detection questions, any of the classic uncountable nouns (advice, information, furniture, luggage, news, poetry, machinery) followed by an 's' is almost certainly the error.",
+      "Also check for 'a/an' placed directly before these nouns — that is equally wrong.",
+    ],
+    correctExamples: [
+      { id: "ex-n1-1", text: "He gave me useful advice before the interview." },
+      { id: "ex-n1-2", text: "We need a piece of furniture for this corner." },
+      { id: "ex-n1-3", text: "There is little information available on this topic." },
+    ],
+    wrongExamples: [
+      { id: "wx-n1-1", text: "He gave me useful advices before the interview.", note: "'advices' should be 'advice'." },
+      { id: "wx-n1-2", text: "We need a furniture for this corner.", note: "'a furniture' should be 'a piece of furniture'." },
+    ],
+    previousYearQuestions: [
+      "SSC CGL: Spot the error — 'She has bought several new furnitures for her office.'",
+      "SSC CHSL: Fill in the blank — 'I need some ___ (advice/advices) on this matter.'",
+    ],
+    practiceQuestions: [
+      {
+        id: "pq-n1-1",
+        question: "Choose the correct sentence.",
+        options: [
+          "He has many luggages with him.",
+          "He has much luggage with him.",
+          "He has a luggage with him.",
+          "He has many luggage with him.",
+        ],
+        correctOptionIndex: 1,
+        explanation: "'Luggage' is uncountable — it takes 'much', not 'many' or 'a', and never takes 's'.",
+      },
+    ],
+    summary: "Uncountable nouns (advice, information, furniture, luggage, news, poetry, machinery) never take 's' or 'a/an', and always take a singular verb.",
+    keywords: ["uncountable noun", "material noun", "abstract noun", "advice", "furniture", "information"],
+    relatedRuleIds: ["rule-noun-002"],
+    readingTimeMinutes: 4,
+    createdAt: "2026-07-03T00:00:00.000Z",
+    updatedAt: "2026-07-03T00:00:00.000Z",
+  },
+  {
+    id: "rule-noun-002",
+    chapterId: "ch-noun-1",
+    categoryId: "cat-noun",
+    ruleNumber: 1,
+    title: "Nouns plural in form but singular in meaning always take a singular verb",
+    slug: "plural-form-singular-meaning",
+    difficulty: "medium",
+    importance: "very-high",
+    englishExplanation:
+      "A group of nouns end in 's' and look plural, but they name a single subject, science, game, or disease, and are treated as singular. Common examples: Mathematics, Physics, Economics, Ethics, Civics, Statistics (as a subject), News, Athletics, Measles, Mumps, Billiards. These always take a singular verb.",
+    hindiExplanation:
+      "कुछ शब्द 's' पर खत्म होकर plural जैसे दिखते हैं लेकिन वास्तव में singular होते हैं और singular verb लेते हैं — जैसे Mathematics, Physics, News, Economics, Athletics, Measles. ध्यान रहे 'News is...' सही है, 'News are...' गलत।",
+    memoryTrick: "SNEP: Subjects (Physics, Economics), News, Exercises/games (Athletics, Billiards), and diseases (Measles) — all singular despite the 's'.",
+    importantPoints: [
+      "Subjects/sciences: Mathematics, Physics, Economics, Ethics, Civics, Statistics (as a field of study).",
+      "'Statistics' is singular when it means the subject, but plural when it means a set of data figures.",
+      "Games: Billiards, Draughts.",
+      "Diseases: Measles, Mumps, Rickets.",
+      "'News' is always singular, regardless of context.",
+    ],
+    exceptions: [
+      "'Statistics' takes a plural verb when referring to actual numerical data: 'The statistics are alarming.'",
+    ],
+    commonMistakes: [
+      "Mathematics are my favourite subject. — should be 'Mathematics is'.",
+      "The news are shocking. — should be 'The news is'.",
+      "Physics are a difficult subject. — should be 'Physics is'.",
+    ],
+    sscTips: [
+      "If the sentence names a subject, disease, or game ending in 's', and the verb is 'are/were', that's the error — it should be 'is/was'.",
+      "Watch specifically for 'News' — SSC repeats this trap often because students instinctively pluralize it.",
+    ],
+    correctExamples: [
+      { id: "ex-n2-1", text: "Mathematics is not everyone's favourite subject." },
+      { id: "ex-n2-2", text: "The news of his promotion has spread quickly." },
+      { id: "ex-n2-3", text: "Physics deals with matter and energy." },
+    ],
+    wrongExamples: [
+      { id: "wx-n2-1", text: "Mathematics are not everyone's favourite subject.", note: "'are' should be 'is'." },
+      { id: "wx-n2-2", text: "The news have spread quickly.", note: "'have' should be 'has'." },
+    ],
+    previousYearQuestions: [
+      "SSC CGL: Spot the error — 'Economics are taught in most colleges.'",
+      "SSC MTS: Fill in the blank — 'The news ___ (is/are) too good to be true.'",
+    ],
+    practiceQuestions: [
+      {
+        id: "pq-n2-1",
+        question: "Choose the correct sentence.",
+        options: [
+          "Athletics are a good form of exercise.",
+          "Athletics is a good form of exercise.",
+          "Athletics were a good form of exercise.",
+          "Athletics have a good form of exercise.",
+        ],
+        correctOptionIndex: 1,
+        explanation: "'Athletics', as a field of physical activity, is treated as singular and takes 'is'.",
+      },
+    ],
+    summary: "Mathematics, Physics, Economics, News, Athletics, and Measles look plural but are singular — use a singular verb.",
+    keywords: ["news", "mathematics", "physics", "singular verb", "plural in form"],
+    relatedRuleIds: ["rule-noun-003", "rule-sva-001"],
+    readingTimeMinutes: 4,
+    createdAt: "2026-07-03T00:00:00.000Z",
+    updatedAt: "2026-07-03T00:00:00.000Z",
+  },
+  {
+    id: "rule-noun-003",
+    chapterId: "ch-noun-1",
+    categoryId: "cat-noun",
+    ruleNumber: 2,
+    title: "Some nouns exist only in plural form and always take a plural verb",
+    slug: "always-plural-nouns",
+    difficulty: "medium",
+    importance: "high",
+    englishExplanation:
+      "Certain nouns — mostly tools with two parts, articles of clothing with two legs, and a few fixed expressions — have no singular form at all and always take a plural verb. Common examples: scissors, trousers, spectacles, glasses (eyewear), tongs, pliers, alms, thanks, riches, surroundings, goods, wages, premises.",
+    hindiExplanation:
+      "कुछ noun का कोई singular रूप ही नहीं होता — जैसे scissors, trousers, spectacles, alms, thanks। ये हमेशा plural verb लेते हैं। एक वस्तु बताने के लिए 'a pair of' का प्रयोग करें, जैसे 'a pair of scissors'.",
+    memoryTrick: "Two-legged and two-bladed things (trousers, scissors, spectacles) always come in pairs, so they're always plural.",
+    importantPoints: [
+      "To refer to one item, use 'a pair of' — 'a pair of scissors is on the table' (the verb agrees with 'pair', which is singular).",
+      "'Thanks', 'alms', 'riches', 'goods', 'wages', 'premises', 'surroundings' have no singular counterpart.",
+    ],
+    exceptions: [
+      "When 'pair of' is used, the verb agrees with 'pair' (singular): 'A pair of trousers was on the bed', not 'were'.",
+    ],
+    commonMistakes: [
+      "The scissor is on the table. — should be 'scissors' (never used in singular).",
+      "A pair of scissors are lying there. — should be 'is lying', since 'pair' is singular.",
+    ],
+    sscTips: [
+      "Watch for a singular form of these nouns used directly ('a scissor', 'a trouser') — that's the classic error.",
+      "Also check 'a pair of X' sentences: the verb must agree with 'pair', not with the plural noun after 'of'.",
+    ],
+    correctExamples: [
+      { id: "ex-n3-1", text: "These scissors are very sharp." },
+      { id: "ex-n3-2", text: "A pair of spectacles was lying on the desk." },
+      { id: "ex-n3-3", text: "His thanks were heartfelt." },
+    ],
+    wrongExamples: [
+      { id: "wx-n3-1", text: "This scissor is very sharp.", note: "should be 'These scissors are'." },
+      { id: "wx-n3-2", text: "A pair of spectacles were lying on the desk.", note: "'were' should be 'was' — verb agrees with 'pair'." },
+    ],
+    previousYearQuestions: [
+      "SSC CHSL: Spot the error — 'Where is my trouser? I cannot find it.'",
+      "SSC CGL: Fill in the blank — 'A pair of scissors ___ (is/are) kept in the drawer.'",
+    ],
+    practiceQuestions: [
+      {
+        id: "pq-n3-1",
+        question: "Choose the correct sentence.",
+        options: [
+          "My trouser is torn.",
+          "My trousers is torn.",
+          "My trousers are torn.",
+          "My trouser are torn.",
+        ],
+        correctOptionIndex: 2,
+        explanation: "'Trousers' has no singular form and always takes a plural verb: 'trousers are torn'.",
+      },
+    ],
+    summary: "Scissors, trousers, spectacles, alms, thanks, and similar nouns have no singular form and always take a plural verb; use 'a pair of' for one item.",
+    keywords: ["always plural", "scissors", "trousers", "spectacles", "pair of"],
+    relatedRuleIds: ["rule-noun-002", "rule-noun-004"],
+    readingTimeMinutes: 3,
+    createdAt: "2026-07-03T00:00:00.000Z",
+    updatedAt: "2026-07-03T00:00:00.000Z",
+  },
+  {
+    id: "rule-noun-004",
+    chapterId: "ch-noun-1",
+    categoryId: "cat-noun",
+    ruleNumber: 3,
+    title: "Some nouns have the same form in singular and plural",
+    slug: "same-form-singular-plural",
+    difficulty: "medium",
+    importance: "high",
+    englishExplanation:
+      "A small set of nouns is spelled identically whether singular or plural — the verb, article, or a number word must be used to tell which is meant. Common examples: sheep, deer, fish, series, species, aircraft, dozen (after a number), yoke.",
+    hindiExplanation:
+      "कुछ noun singular और plural दोनों में एक जैसे दिखते हैं — जैसे sheep, deer, fish, series, species, aircraft। इनके साथ verb या संख्या देखकर पता चलता है कि singular है या plural।",
+    memoryTrick: "SASD-Fish: Sheep, Aircraft, Series, Deer, Fish — same spelling, no matter the count.",
+    importantPoints: [
+      "'Sheep is grazing' (one sheep) vs 'Sheep are grazing' (many sheep) — the noun form never changes.",
+      "'Fish' as an animal is usually unchanged in plural; 'fishes' is used only to mean different species of fish.",
+      "'Dozen', 'hundred', 'thousand', 'score' keep the singular form when preceded by a number: 'two dozen eggs', not 'dozens'.",
+    ],
+    exceptions: [
+      "When used generally without a number, 'hundreds of', 'dozens of', 'thousands of' do take 's': 'hundreds of people'.",
+    ],
+    commonMistakes: [
+      "I saw two deers in the forest. — should be 'two deer'.",
+      "He bought two dozens of bananas. — should be 'two dozen'.",
+    ],
+    sscTips: [
+      "If a number word (two, three, several) is placed directly before sheep/deer/aircraft/dozen and an 's' is added, that's the error.",
+      "This is a favourite one-word-substitution and error-spotting trap in SSC CGL Tier-1.",
+    ],
+    correctExamples: [
+      { id: "ex-n4-1", text: "The farmer keeps two hundred sheep on his land." },
+      { id: "ex-n4-2", text: "Three deer crossed the road at dawn." },
+      { id: "ex-n4-3", text: "She bought two dozen mangoes." },
+    ],
+    wrongExamples: [
+      { id: "wx-n4-1", text: "The farmer keeps two hundred sheeps on his land.", note: "'sheeps' is never correct." },
+      { id: "wx-n4-2", text: "She bought two dozens mangoes.", note: "'dozens' should be 'dozen' after a number." },
+    ],
+    previousYearQuestions: [
+      "SSC CGL: Spot the error — 'The hunter saw five deers near the river.'",
+      "SSC MTS: Fill in the blank — 'He bought three ___ (dozen/dozens) apples.'",
+    ],
+    practiceQuestions: [
+      {
+        id: "pq-n4-1",
+        question: "Choose the correct sentence.",
+        options: [
+          "There are many fishs in the pond.",
+          "There are many fish in the pond.",
+          "There are many fishes in the pond, all of the same kind.",
+          "There is many fish in the pond.",
+        ],
+        correctOptionIndex: 1,
+        explanation: "For the same species, 'fish' stays unchanged in plural; 'fishes' would only apply to multiple species.",
+      },
+    ],
+    summary: "Sheep, deer, fish, series, species, aircraft, and dozen/hundred/score (after a number) keep the same form in singular and plural.",
+    keywords: ["same form", "sheep", "deer", "fish", "dozen", "aircraft"],
+    relatedRuleIds: ["rule-noun-003"],
+    readingTimeMinutes: 3,
+    createdAt: "2026-07-03T00:00:00.000Z",
+    updatedAt: "2026-07-03T00:00:00.000Z",
+  },
+  {
+    id: "rule-noun-005",
+    chapterId: "ch-noun-1",
+    categoryId: "cat-noun",
+    ruleNumber: 4,
+    title: "A number + noun used as an adjective stays singular and is hyphenated",
+    slug: "compound-number-adjective-singular",
+    difficulty: "medium",
+    importance: "very-high",
+    englishExplanation:
+      "When a number and a noun combine to modify another noun (acting as a single adjective before it), the noun in the middle stays singular and the phrase is hyphenated — e.g. 'a five-year-old boy', 'a ten-rupee note', 'a two-hour journey'. The plural 's' only returns when the same words are used as an ordinary noun phrase, not as an adjective.",
+    hindiExplanation:
+      "जब संख्या + noun मिलकर किसी और noun को adjective की तरह modify करते हैं, तो बीच वाला noun singular रहता है और hyphen लगता है — जैसे 'a five-year-old boy', 'a ten-rupee note'. लेकिन जब यही शब्द सामान्य noun phrase की तरह इस्तेमाल हों, तब plural 's' वापस आ जाता है: 'The boy is five years old.'",
+    memoryTrick: "Before the noun it describes, the number-noun combo acts like one adjective — and one adjective doesn't need an 's'.",
+    importantPoints: [
+      "Used as an adjective (before a noun): singular + hyphens — 'a ten-day trip', 'a three-storey building'.",
+      "Used as a plain noun phrase (after 'is/was' or standing alone): plural, no hyphens — 'The trip lasted ten days.'",
+      "This applies to year, day, hour, rupee, mile, storey, and similar measurement words.",
+    ],
+    exceptions: [],
+    commonMistakes: [
+      "He is a ten-years-old boy. — should be 'a ten-year-old boy'.",
+      "It was a three-hours journey. — should be 'a three-hour journey'.",
+    ],
+    sscTips: [
+      "Whenever you see number + noun + hyphen directly before another noun, check that the middle noun has NO 's' — this is one of the most repeated SSC error-spotting patterns.",
+      "Don't confuse this with the same phrase used after 'is/was', where the plural is correct and hyphens disappear.",
+    ],
+    correctExamples: [
+      { id: "ex-n5-1", text: "She gave the beggar a ten-rupee note." },
+      { id: "ex-n5-2", text: "It was a two-hour flight to Delhi." },
+      { id: "ex-n5-3", text: "The boy is five years old." },
+    ],
+    wrongExamples: [
+      { id: "wx-n5-1", text: "She gave the beggar a ten-rupees note.", note: "should be 'ten-rupee' (singular, hyphenated)." },
+      { id: "wx-n5-2", text: "It was a two-hours flight to Delhi.", note: "should be 'two-hour flight'." },
+    ],
+    previousYearQuestions: [
+      "SSC CGL: Spot the error — 'This is a five-storeys building near the market.'",
+      "SSC CHSL: Fill in the blank — 'He works on a ___ (six-hour/six-hours) shift.'",
+    ],
+    practiceQuestions: [
+      {
+        id: "pq-n5-1",
+        question: "Choose the correct sentence.",
+        options: [
+          "He bought a twenty-rupees pen.",
+          "He bought a twenty-rupee pen.",
+          "He bought a twenty rupees pen.",
+          "He bought twenty-rupee's pen.",
+        ],
+        correctOptionIndex: 1,
+        explanation: "As a compound adjective before 'pen', the number-noun stays singular and hyphenated: 'twenty-rupee pen'.",
+      },
+    ],
+    summary: "Number + noun used as an adjective before another noun stays singular and hyphenated (a five-year-old boy), but reverts to plural without hyphens as an ordinary noun phrase (five years old).",
+    keywords: ["compound adjective", "hyphenated noun", "number noun", "year old", "rupee note"],
+    relatedRuleIds: ["rule-noun-002"],
+    readingTimeMinutes: 4,
+    createdAt: "2026-07-03T00:00:00.000Z",
+    updatedAt: "2026-07-03T00:00:00.000Z",
+  },
+  {
+    id: "rule-noun-006",
+    chapterId: "ch-noun-3",
+    categoryId: "cat-noun",
+    ruleNumber: 1,
+    title: "Collective nouns take a singular verb as one unit, plural when members act separately",
+    slug: "collective-noun-verb-agreement",
+    difficulty: "medium",
+    importance: "very-high",
+    englishExplanation:
+      "A collective noun (family, team, jury, committee, army, crowd, government, class) names a group. It takes a singular verb when the group acts or is considered as a single whole, and a plural verb only when the individual members are acting or being referred to separately.",
+    hindiExplanation:
+      "Collective noun (family, team, jury, committee) जब समूह एक इकाई की तरह कार्य करता है तो singular verb लेता है, और जब सदस्य अलग-अलग कार्य कर रहे हों तो plural verb लेता है। जैसे: 'The team is playing well' (एक इकाई), 'The team are quarrelling among themselves' (अलग-अलग सदस्य)।",
+    memoryTrick: "One team, one goal → singular. Many members, many opinions → plural.",
+    importantPoints: [
+      "Default to singular for collective nouns unless the sentence clearly emphasizes individual members acting differently.",
+      "Common collective nouns: family, team, jury, committee, army, crowd, government, class, audience, staff, public.",
+      "'The jury is deliberating' (as one body) vs 'The jury are divided in their opinions' (individually).",
+    ],
+    exceptions: [
+      "'Police', 'cattle', 'people' (meaning persons), 'gentry', and 'peasantry' are always plural in construction and always take a plural verb, even though they look like collective nouns.",
+    ],
+    commonMistakes: [
+      "The team are winning the match. — usually should be 'is', since the team acts as one unit in a match.",
+      "The police is investigating the case. — should be 'are', since 'police' is always treated as plural.",
+    ],
+    sscTips: [
+      "For most SSC questions, treat collective nouns as singular by default — only switch to plural if the sentence explicitly shows disagreement or individual action among members.",
+      "Memorize 'police', 'cattle', and 'people' as fixed exceptions that are always plural, regardless of context.",
+    ],
+    correctExamples: [
+      { id: "ex-n6-1", text: "The committee has approved the new proposal." },
+      { id: "ex-n6-2", text: "The family is going on a vacation together." },
+      { id: "ex-n6-3", text: "The jury are divided over the verdict." },
+    ],
+    wrongExamples: [
+      { id: "wx-n6-1", text: "The committee have approved the new proposal.", note: "should be 'has', since the committee acted as one unit." },
+      { id: "wx-n6-2", text: "The police is investigating the matter.", note: "'police' is always plural — should be 'are'." },
+    ],
+    previousYearQuestions: [
+      "SSC CGL: Spot the error — 'The audience was clapping and some of them were shouting.'",
+      "SSC CHSL: Fill in the blank — 'The cattle ___ (is/are) grazing in the field.'",
+    ],
+    practiceQuestions: [
+      {
+        id: "pq-n6-1",
+        question: "Choose the correct sentence.",
+        options: [
+          "The police has arrested the thief.",
+          "The police have arrested the thief.",
+          "The police is arresting the thief.",
+          "The police was arresting the thief.",
+        ],
+        correctOptionIndex: 1,
+        explanation: "'Police' is always treated as a plural noun in English and always takes a plural verb.",
+      },
+    ],
+    summary: "Collective nouns take a singular verb as one unit and a plural verb when members act individually; police, cattle, and people are always plural.",
+    keywords: ["collective noun", "team", "jury", "committee", "police", "cattle"],
+    relatedRuleIds: ["rule-sva-001"],
+    readingTimeMinutes: 4,
+    createdAt: "2026-07-03T00:00:00.000Z",
+    updatedAt: "2026-07-03T00:00:00.000Z",
+  },
+  {
+    id: "rule-noun-007",
+    chapterId: "ch-noun-4",
+    categoryId: "cat-noun",
+    ruleNumber: 1,
+    title: "Use 's for living beings, time, distance, and money; use 'of' for inanimate objects",
+    slug: "possessive-apostrophe-s-vs-of",
+    difficulty: "medium",
+    importance: "high",
+    englishExplanation:
+      "The possessive case with 's (apostrophe-s) is normally used for living beings (people, animals) and for expressions of time, distance, weight, and money. For inanimate, non-living objects, the possessive is usually formed with 'of' instead.",
+    hindiExplanation:
+      "'s possessive आमतौर पर जीवित प्राणियों (लोग, जानवर) और समय, दूरी, वजन, पैसे के लिए प्रयोग होता है। निर्जीव वस्तुओं (inanimate objects) के लिए आमतौर पर 'of' का प्रयोग होता है — जैसे 'the roof of the house', ना कि 'the house's roof'.",
+    memoryTrick: "Living things 'own' things with 's; lifeless things need 'of' to show ownership.",
+    importantPoints: [
+      "Living beings: 'Ravi's book', 'the dog's tail'.",
+      "Time, distance, weight, money: 'a day's journey', 'a mile's distance', 'a kilo's weight', 'a week's leave', 'a rupee's worth'.",
+      "Inanimate objects: 'the leg of the table' (not 'the table's leg'), 'the roof of the house'.",
+      "Personified or well-established idiomatic exceptions do exist (e.g. 'the sun's rays', 'at arm's length') and are commonly tested separately.",
+    ],
+    exceptions: [
+      "Personification and fixed idioms override the rule: 'the sun's rays', 'the ship's captain', 'for heaven's sake', 'at death's door'.",
+      "Some geographical and institutional names conventionally take 's even though they name a place: 'India's capital', 'the world's population'.",
+    ],
+    commonMistakes: [
+      "The table's leg is broken. — should be 'the leg of the table' since 'table' is inanimate.",
+      "The book of Ravi is on the shelf. — should be 'Ravi's book', since Ravi is a living being.",
+    ],
+    sscTips: [
+      "Check whether the 'owner' noun is living or non-living — that single check resolves most SSC possessive-case error questions.",
+      "Watch for time/money/distance expressions used with 'of' instead of 's — that reversal is also commonly tested: 'a journey of two days' is acceptable, but 'two days' journey' is the more natural SSC-preferred form.",
+    ],
+    correctExamples: [
+      { id: "ex-n7-1", text: "Ravi's book is on the table." },
+      { id: "ex-n7-2", text: "The leg of the table is broken." },
+      { id: "ex-n7-3", text: "He took a week's leave from office." },
+    ],
+    wrongExamples: [
+      { id: "wx-n7-1", text: "The table's leg is broken.", note: "should be 'the leg of the table' — table is inanimate." },
+      { id: "wx-n7-2", text: "The book of Ravi is on the table.", note: "should be 'Ravi's book' — Ravi is a living being." },
+    ],
+    previousYearQuestions: [
+      "SSC CGL: Spot the error — 'The door's colour of the house needs repainting.'",
+      "SSC CHSL: Fill in the blank — 'He needs a ___ (day's/day) rest before travelling again.'",
+    ],
+    practiceQuestions: [
+      {
+        id: "pq-n7-1",
+        question: "Choose the correct sentence.",
+        options: [
+          "The house's roof is leaking.",
+          "The roof of the house is leaking.",
+          "The roof house's is leaking.",
+          "The house roof's is leaking.",
+        ],
+        correctOptionIndex: 1,
+        explanation: "'House' is an inanimate object, so the possessive is formed with 'of': 'the roof of the house', not 's.",
+      },
+    ],
+    summary: "Use 's for living beings and for time/distance/weight/money; use 'of' for inanimate objects, aside from a set of fixed idiomatic exceptions.",
+    keywords: ["possessive case", "apostrophe s", "of possessive", "living beings", "inanimate objects"],
+    relatedRuleIds: [],
+    readingTimeMinutes: 4,
+    createdAt: "2026-07-03T00:00:00.000Z",
+    updatedAt: "2026-07-03T00:00:00.000Z",
+  },
   {
     id: "rule-conj-001",
     chapterId: "ch-conj-3",
